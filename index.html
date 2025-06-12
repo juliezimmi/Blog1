@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Elegant Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts for Elegant Font (Playfair Display) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <header>
+    <h1>My Elegant Blog</h1>
+    <nav>
+      <button id="addPostBtn">+ New Post</button>
+      <button id="addImageBtn">+ New Image</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="blog-posts">
+      <!-- Blog posts will appear here -->
+    </section>
+    <section id="gallery">
+      <h2>Image Gallery</h2>
+      <div id="images">
+        <img src="image1" alt="Gallery Image" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Adding Post -->
+  <div class="modal" id="postModal">
+    <div class="modal-content">
+      <span class="close" id="closePostModal">&times;</span>
+      <h2>New Blog Post</h2>
+      <input type="text" id="postTitle" placeholder="Title" />
+      <textarea id="postContent" placeholder="Write your post here..."></textarea>
+      <button id="savePostBtn">Save Post</button>
+    </div>
+  </div>
+
+  <!-- Modal for Adding Image -->
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <span class="close" id="closeImageModal">&times;</span>
+      <h2>Add New Image</h2>
+      <input type="file" id="newImageInput" accept="image/*" />
+      <button id="addImageToGalleryBtn">Add Image</button>
+    </div>
+  </div>
+
+  <script src="blog.js"></script>
+</body>
+</html>
